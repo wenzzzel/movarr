@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# Load environment variables
+. /app/env-vars.sh
+
 cd "$MOVARR_RADARR_DIRECTORY";
 find . -type f -name "*.srt" -exec cp --parents -v {} "$MOVARR_TDARR_MOVIES_OUTPUT_DIRECTORY" \;
 
